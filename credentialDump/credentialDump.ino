@@ -60,6 +60,6 @@ void blinkLed(void){
     delay(500);
   
     digitalWrite(0,LOW);
-    digitalWrite(1,HIGH);
+    digitalWrite(1,LOW);
   }
 }
